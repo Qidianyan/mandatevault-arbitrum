@@ -39,6 +39,7 @@ async function main() {
   const registryArt = loadArtifact("ERC8004AgentRegistry");
   const verifierArt = loadArtifact("Eip712MandateVerifier");
   const vaultArt = loadArtifact("MandateVault");
+  const zeroDevValidatorArt = loadArtifact("ZeroDevMandateValidator");
   const poolArt = loadArtifact("IAaveV3Pool");
 
   if (!isSepolia) {
@@ -54,9 +55,10 @@ async function main() {
 
   if (dryRun) {
     console.log("[deploy] Preflight mode complete (set DEPLOYER_PRIVATE_KEY in environment to broadcast live transactions).");
-    console.log(`  - ERC8004AgentRegistry bytecode: ${registryArt.bytecodeBytes} bytes`);
-    console.log(`  - Eip712MandateVerifier bytecode: ${verifierArt.bytecodeBytes} bytes`);
-    console.log(`  - MandateVault bytecode:          ${vaultArt.bytecodeBytes} bytes`);
+    console.log(`  - ERC8004AgentRegistry bytecode:    ${registryArt.bytecodeBytes} bytes`);
+    console.log(`  - Eip712MandateVerifier bytecode:   ${verifierArt.bytecodeBytes} bytes`);
+    console.log(`  - MandateVault bytecode:            ${vaultArt.bytecodeBytes} bytes`);
+    console.log(`  - ZeroDevMandateValidator bytecode: ${zeroDevValidatorArt.bytecodeBytes} bytes`);
     return;
   }
 
@@ -109,11 +111,19 @@ async function main() {
   });
   await publicClient.waitForTransactionReceipt({ hash: authHash });
 
+  const zdHash = await walletClient.deployContract({
+    abi: zeroDevValidatorArt.abi,
+    bytecode: zeroDevValidatorArt.bytecode,
+    args: [],
+  });
+  const zdReceipt = await publicClient.waitForTransactionReceipt({ hash: zdHash });
+
   console.log(JSON.stringify({
     chainId: chain.id,
     erc8004Registry: regReceipt.contractAddress,
     eip712MandateVerifier: verReceipt.contractAddress,
     mandateVault: vaultReceipt.contractAddress,
+    zeroDevMandateValidator: zdReceipt.contractAddress,
   }, null, 2));
 }
 

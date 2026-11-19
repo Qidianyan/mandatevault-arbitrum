@@ -1,6 +1,6 @@
 {
   "compiler": "0.8.28+commit.7893614a.Emscripten.clang",
-  "compiledAt": "2026-11-18T10:57:10.119Z",
+  "compiledAt": "2026-11-19T15:34:24.917Z",
   "contracts": {
     "ERC8004AgentRegistry": {
       "sourceName": "ERC8004AgentRegistry.sol",
@@ -17,6 +17,11 @@
       "bytecodeBytes": 15998,
       "deployedBytes": 14591
     },
+    "ZeroDevMandateValidator": {
+      "sourceName": "ZeroDevMandateValidator.sol",
+      "bytecodeBytes": 9079,
+      "deployedBytes": 9053
+    },
     "IAaveV3Pool": {
       "sourceName": "interfaces/IAaveV3Pool.sol",
       "bytecodeBytes": 0,
@@ -24,6 +29,16 @@
     },
     "IERC20": {
       "sourceName": "interfaces/IERC20.sol",
+      "bytecodeBytes": 0,
+      "deployedBytes": 0
+    },
+    "IERC7579Module": {
+      "sourceName": "interfaces/IERC7579Validator.sol",
+      "bytecodeBytes": 0,
+      "deployedBytes": 0
+    },
+    "IERC7579Validator": {
+      "sourceName": "interfaces/IERC7579Validator.sol",
       "bytecodeBytes": 0,
       "deployedBytes": 0
     },
@@ -56,6 +71,16 @@
       "sourceName": "testing/ReferenceArbitrumDeFi.sol",
       "bytecodeBytes": 1385,
       "deployedBytes": 1359
+    },
+    "ReferenceEntryPointV07": {
+      "sourceName": "testing/ReferenceKernelV3Account.sol",
+      "bytecodeBytes": 1278,
+      "deployedBytes": 1252
+    },
+    "ReferenceKernelV3Account": {
+      "sourceName": "testing/ReferenceKernelV3Account.sol",
+      "bytecodeBytes": 2856,
+      "deployedBytes": 2679
     }
   }
 }
