@@ -1,0 +1,60 @@
+{
+  "contractName": "IMandateVerifier",
+  "sourceName": "interfaces/IMandateVerifier.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "verifierScheme",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "mandateDigest",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "verifierContext",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyMandate",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "valid",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "authorizer",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "methodIdentifiers": {
+    "verifierScheme()": "0e4ea9e2",
+    "verifyMandate(bytes32,bytes,bytes)": "f45d01ce"
+  },
+  "bytecodeBytes": 0
+}

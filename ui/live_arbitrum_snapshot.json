@@ -1,0 +1,17 @@
+{
+  "chainId": 42161,
+  "rpcEndpoint": "https://arb1.arbitrum.io/rpc",
+  "blockNumber": 525302694,
+  "blockTimestamp": 1794999320,
+  "gasPriceGwei": "0.0200",
+  "usdcAddress": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+  "aavePoolAddress": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+  "aTokenAddress": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
+  "liquidityIndexRay": "1184769291051793457952404692",
+  "currentLiquidityRateRay": "30422337101124422471878784",
+  "supplyAprPercent": 3.0422,
+  "supplyApyPercent": 3.089,
+  "aArbUsdcTotalSupplyUsdc": 193455649.16,
+  "poolAvailableCashUsdc": 30734512.15,
+  "fetchedAtIso": "2026-11-18T10:55:21.899Z"
+}

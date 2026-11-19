@@ -1,0 +1,61 @@
+{
+  "compiler": "0.8.28+commit.7893614a.Emscripten.clang",
+  "compiledAt": "2026-11-18T10:57:10.119Z",
+  "contracts": {
+    "ERC8004AgentRegistry": {
+      "sourceName": "ERC8004AgentRegistry.sol",
+      "bytecodeBytes": 3700,
+      "deployedBytes": 3543
+    },
+    "Eip712MandateVerifier": {
+      "sourceName": "Eip712MandateVerifier.sol",
+      "bytecodeBytes": 706,
+      "deployedBytes": 680
+    },
+    "MandateVault": {
+      "sourceName": "MandateVault.sol",
+      "bytecodeBytes": 15998,
+      "deployedBytes": 14591
+    },
+    "IAaveV3Pool": {
+      "sourceName": "interfaces/IAaveV3Pool.sol",
+      "bytecodeBytes": 0,
+      "deployedBytes": 0
+    },
+    "IERC20": {
+      "sourceName": "interfaces/IERC20.sol",
+      "bytecodeBytes": 0,
+      "deployedBytes": 0
+    },
+    "IERC8004Registry": {
+      "sourceName": "interfaces/IERC8004Registry.sol",
+      "bytecodeBytes": 0,
+      "deployedBytes": 0
+    },
+    "IMandateVerifier": {
+      "sourceName": "interfaces/IMandateVerifier.sol",
+      "bytecodeBytes": 0,
+      "deployedBytes": 0
+    },
+    "SafeTransferLib": {
+      "sourceName": "libraries/SafeTransferLib.sol",
+      "bytecodeBytes": 85,
+      "deployedBytes": 57
+    },
+    "ReferenceAArbUSDCn": {
+      "sourceName": "testing/ReferenceArbitrumDeFi.sol",
+      "bytecodeBytes": 2786,
+      "deployedBytes": 2613
+    },
+    "ReferenceAaveV3Pool": {
+      "sourceName": "testing/ReferenceArbitrumDeFi.sol",
+      "bytecodeBytes": 6435,
+      "deployedBytes": 3247
+    },
+    "ReferenceUSDC6": {
+      "sourceName": "testing/ReferenceArbitrumDeFi.sol",
+      "bytecodeBytes": 1385,
+      "deployedBytes": 1359
+    }
+  }
+}

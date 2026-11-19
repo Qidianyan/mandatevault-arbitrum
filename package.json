@@ -1,0 +1,36 @@
+{
+  "name": "@mandatevault/arbitrum-protocol",
+  "version": "1.0.0",
+  "description": "MandateVault: Arbitrum-Native AP2 x x402 x ERC-8004 Zero-Idle Aave V3 Yield Settlement Vault Protocol",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "compile": "node scripts/compile.mjs",
+    "snapshot": "node --import tsx scripts/capture-arbitrum-snapshot.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:contracts": "node --test test/vault.protocol.test.mjs",
+    "test:fuzz": "node --test test/vault.fuzz.test.mjs",
+    "test:sdk": "node --import tsx --test test/sdk.x402.test.mjs",
+    "test:py": "python3 -m unittest discover -s test -p 'python_sdk_test.py' -v",
+    "test:stylus": "cargo test --manifest-path stylus_verifier/Cargo.toml",
+    "test:ui": "node --test test/ui_color_and_anti_fraud.test.mjs",
+    "test:all": "npm run compile && npm run test:contracts && npm run test:fuzz && npm run test:stylus && npm run test:sdk && npm run test:py && npm run test:ui",
+    "serve:gateway": "node --import tsx sdk/typescript/gateway.ts",
+    "deploy:arbitrum": "node scripts/deploy-arbitrum.mjs"
+  },
+  "dependencies": {
+    "viem": "latest"
+  },
+  "devDependencies": {
+    "@ethereumjs/common": "latest",
+    "@ethereumjs/evm": "latest",
+    "@ethereumjs/util": "latest",
+    "@types/node": "latest",
+    "solc": "0.8.28",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
